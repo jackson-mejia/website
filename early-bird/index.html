@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Early Bird</title>
+<script>
+  // Early Bird lives at jackson-mejia.github.io/early-bird/, and its data is tied to that address.
+  // Browsers that cached the brief redirect to this domain land here; send them back.
+  // The query string makes the target a URL no browser has a cached redirect for.
+  (function () {
+    if (/[?&]from=jm\b/.test(location.search)) return; // loop guard
+    location.replace('https://jackson-mejia.github.io/early-bird/?from=jm' + location.hash);
+  })();
+</script>
+<style>
+  body { margin: 0; font: 18px/1.5 Georgia, serif; padding: 3rem 1.5rem; background: #fff; color: #1d1d1f; }
+  @media (prefers-color-scheme: dark) { body { background: #19191a; color: #e7e7e5; } }
+</style>
+</head>
+<body>
+<p><a href="https://jackson-mejia.github.io/early-bird/?from=jm" style="color:inherit">Open Early Bird</a></p>
+</body>
+</html>
